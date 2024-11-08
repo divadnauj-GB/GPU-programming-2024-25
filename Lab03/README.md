@@ -97,6 +97,6 @@ Here is a simple example of convolution of 3x3 input signal and impulse response
 |<img src="docs/conv2dex_08.png" alt="drawing" width="150"/>|$y[1,2]=\sum_{j=1}^{3}\sum_{i=0}^{2}x[i,j] \cdot h[1-i, 2-j]$|
 |<img src="docs/conv2dex_09.png" alt="drawing" width="150"/>|$y[2,2]=\sum_{j=1}^{3}\sum_{i=1}^{3}x[i,j] \cdot h[2-i, 2-j]$|
 
-Implement your algorihtm in CUDA to compute the 2-D convolution on GPU. Make your implementation w/ and w/o constant memory and Shared Memory (Tiling approach)
+Implement your algorihtm in CUDA to compute the 2-D convolution of an imput matrix of $400 \times 400$ and a $3 \times 3$ kernel. Make your implementation w/ and w/o constant memory and Shared Memory (Tiling approach)
 
 Evaluate the improvement due to each of them (and both).
