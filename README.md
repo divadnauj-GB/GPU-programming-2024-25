@@ -12,11 +12,11 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab03](Lab03/README.md): Constant and shared memory
 
-[Lab04](): TODO
+[Lab04](Lab04/README.md): TODO
 
-[Lab05](): TODO
+[Lab05](Lab05/README.md): TODO
 
-[Lab06](): TODO
+[Lab06](Lab06/README.md): TODO
 
-[Lab07](): TODO
+[Lab07](Lab07/README.md): TODO
 
