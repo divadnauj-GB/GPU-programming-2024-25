@@ -4,7 +4,7 @@ Setting up tools and boards, parallel and distributed programming, first CUDA ex
 
 ## **Exercise 0: Setting up the Environment for Parallel Programming (Threads, OpenMP, and MPI)**
 
-1. Use your laptop or laboratory computer to start a virtual machine with Ubuntu in any version (the suggested version is Ubuntu 20.04.4 Focal Fossa). You can download a ready-to-use image from [www.osboxes.org](www.osboxes.org). For example, the following link will give you the DVI file for VirtualBox; if you have a different Virtual machine engine, you need to download the right version through the webpage.
+1. Use your laptop or laboratory computer to start a virtual machine with Ubuntu in any version (the suggested version is Ubuntu 20.04.4 Focal Fossa). You can download a ready-to-use image from [www.osboxes.org](https://www.osboxes.org/). For example, the following link will give you the DVI file for VirtualBox; if you have a different Virtual machine engine, you need to download the right version through the webpage.
 
 2. Uncompress the downloaded file and create a new virtual machine as suggested in this guide, with the following configurations:
     - Number of CPUs: 8
