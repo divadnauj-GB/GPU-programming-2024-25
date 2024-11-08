@@ -1,4 +1,4 @@
-# GPU programming course
+# GPU programming
 
 This repository corresponds to the laboratory exercises of the GPU programming course at Politecnico di Torino **[01URVOV A.A. 2024/25](https://didattica.polito.it/pls/portal30/gap.pkg_guide.viewGap?p_cod_ins=01URVOV&p_a_acc=2025&p_header=S&p_lang=IT&multi=N)**
 
