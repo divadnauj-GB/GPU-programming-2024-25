@@ -4,13 +4,13 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 ## Laboratory exercises
 
-[Lab00](Lab00/README.md): Introduction to parallel programming
+[Lab00](Lab00/README.md): Introduction to parallel programming 
 
-[Lab01](Lab01/README.md): First CUDA programm
+[Lab01](Lab01/README.md): First CUDA programm ([solutions](Lab01/solutions/))
 
-[Lab02](Lab02/README.md): Debuggin CUDA programs, basic image processing in CUDA
+[Lab02](Lab02/README.md): Debuggin CUDA programs, basic image processing in CUDA ([solutions](Lab02/solutions/))
 
-[Lab03](Lab03/README.md): Constant and shared memory
+[Lab03](Lab03/README.md): Constant and shared memory ([solutions](Lab03/solutions/))
 
 [Lab04](Lab04/README.md): TODO
 
