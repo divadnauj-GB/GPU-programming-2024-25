@@ -29,8 +29,8 @@ Use NVIDIA nsight application for cuda debugging as introduced in the following 
 The input is an RGB triple of unsigned char values; your task will be to write a CUDA program to convert the RGB image into a single unsigned char grayscale intensity value. There are multiple methods for converting a color RGB image to grayscale. The following equations provide different ways of converting RGB to grayscale. The indexes `𝑖`, and `𝑗` correspond to the coordinates of an individual pixel inside the image.
 
 - $Gray[i][j]=\frac{R[i][j]+G[i][j]+B[i][j]}{3}$
-- $Gray[i][j]=0.3*R[i][j]+0.6*G[i][j]+0.11*B[i][j]$
-- $Gray[i][j]=0.21*R[i][j]+0.71*G[i][j]+0.07*B[i][j]$
+- $Gray[i][j]=0.3 \times R[i][j]+0.6\times G[i][j]+0.11\times B[i][j]$
+- $Gray[i][j]=0.21\times R[i][j]+0.71\times G[i][j]+0.07\times B[i][j]$
 
 **Support Functions** The file “imglib_v01.zip” contains a set of helper functions that allows you to handle images without using the OpenCV library. img.h and img.cpp include useful functions for reading and writing PBM and PPM. You can extend them to support more formats in different depths or implement your own better version. 
 

@@ -6,7 +6,17 @@ Using the shared and constant memory of the GPU
 
 Consider applying a 1D stencil to a 1D array of elements. Each output element is the sum of input elements within a radius. So, if the radius is 3, then each output element is the sum of 7 input elements:
 
+<img src="docs/image.png"
+        alt="picture" 
+        width="250"
+        style="display: block; margin: 0 auto"/>
+
 A GPU can implement a stencil operation by making every thread process one output element. So, in the following graphical example, each input element is read seven times when using a stencil of radius 3.
+
+<img src="docs/image2.png"
+        alt="picture" 
+        width="500"
+        style="display: block; margin: 0 auto"/>
 
 Such data reuse can harness the shared memory of the GPU.
 
@@ -32,6 +42,15 @@ nvcc -arch=sm_{xx} -o matrix_mul matrix_mul_shared.cu # xx is your GPU compute c
 Consider a scheme of a simple 1D convolution. Convolution is an array operation where each output data element is a weighted sum of a collection of neighboring input elements. The weights used in the weighted sum calculation are defined by an input mask array.
 
 $P[i] = \sum_{j=-n}^{+n}N[i+j]\times M[j+n]$
+
+
+<img src="docs/image3.png"
+        alt="picture" 
+        width="300"
+        style="display: block; margin: 0 auto"/>
+
+**k** is the width of the filter **M**, **n** is floor(k/2). **w** is the width of the input **N**. Non-existing cells (e.g., N[x] when x < 0 or x >= w) are considered to have a default value of 0.
+
 
 **Assignment 1:**
 
@@ -69,14 +88,14 @@ Here is a simple example of convolution of 3x3 input signal and impulse response
 |||
 |:-:|:-:|
 |<img src="docs/conv2dex_01.png" alt="drawing" width="150"/>|$y[0,0]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[0-i, 0-j]$|
-|<img src="docs/conv2dex_02.png" alt="drawing" width="150"/>|$y[1,0]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[1-i, 0-j]$|
-|<img src="docs/conv2dex_03.png" alt="drawing" width="150"/>|$y[2,0]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[2-i, 0-j]$|
-|<img src="docs/conv2dex_04.png" alt="drawing" width="150"/>|$y[0,1]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[0-i, 1-j]$|
-|<img src="docs/conv2dex_05.png" alt="drawing" width="150"/>|$y[1,1]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[1-i, 1-j]$|
-|<img src="docs/conv2dex_06.png" alt="drawing" width="150"/>|$y[2,1]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[2-i, 1-j]$|
-|<img src="docs/conv2dex_07.png" alt="drawing" width="150"/>|$y[0,2]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[0-i, 2-j]$|
-|<img src="docs/conv2dex_08.png" alt="drawing" width="150"/>|$y[1,2]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[1-i, 2-j]$|
-|<img src="docs/conv2dex_09.png" alt="drawing" width="150"/>|$y[2,2]=\sum_{j=-1}^{1}\sum_{i=-1}^{1}x[i,j] \cdot h[2-i, 2-j]$|
+|<img src="docs/conv2dex_02.png" alt="drawing" width="150"/>|$y[1,0]=\sum_{j=-1}^{1}\sum_{i=0}^{2}x[i,j] \cdot h[1-i, 0-j]$|
+|<img src="docs/conv2dex_03.png" alt="drawing" width="150"/>|$y[2,0]=\sum_{j=-1}^{1}\sum_{i=1}^{3}x[i,j] \cdot h[2-i, 0-j]$|
+|<img src="docs/conv2dex_04.png" alt="drawing" width="150"/>|$y[0,1]=\sum_{j=0}^{2}\sum_{i=-1}^{1}x[i,j] \cdot h[0-i, 1-j]$|
+|<img src="docs/conv2dex_05.png" alt="drawing" width="150"/>|$y[1,1]=\sum_{j=0}^{2}\sum_{i=0}^{2}x[i,j] \cdot h[1-i, 1-j]$|
+|<img src="docs/conv2dex_06.png" alt="drawing" width="150"/>|$y[2,1]=\sum_{j=0}^{2}\sum_{i=1}^{3}x[i,j] \cdot h[2-i, 1-j]$|
+|<img src="docs/conv2dex_07.png" alt="drawing" width="150"/>|$y[0,2]=\sum_{j=1}^{3}\sum_{i=-1}^{1}x[i,j] \cdot h[0-i, 2-j]$|
+|<img src="docs/conv2dex_08.png" alt="drawing" width="150"/>|$y[1,2]=\sum_{j=1}^{3}\sum_{i=0}^{2}x[i,j] \cdot h[1-i, 2-j]$|
+|<img src="docs/conv2dex_09.png" alt="drawing" width="150"/>|$y[2,2]=\sum_{j=1}^{3}\sum_{i=1}^{3}x[i,j] \cdot h[2-i, 2-j]$|
 
 Implement your algorihtm in CUDA to compute the 2-D convolution on GPU. Make your implementation w/ and w/o constant memory and Shared Memory (Tiling approach)
 
