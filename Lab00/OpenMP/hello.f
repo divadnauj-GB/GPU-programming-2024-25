@@ -1,0 +1,10 @@
+	PROGRAM HELLO
+	INTEGER TID, OMP_GET_THREAD_NUM
+	PRINT *, "Hello parallel world from threads:"
+	CALL OMP_SET_NUM_THREADS(8)
+!$OMP PARALLEL PRIVATE(TID)
+	TID = OMP_GET_THREAD_NUM()
+	PRINT *, TID
+!$OMP END PARALLEL
+	PRINT *, "Back to the sequential world."
+	END
