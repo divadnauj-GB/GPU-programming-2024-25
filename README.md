@@ -10,14 +10,14 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab02](Lab02/README.md): Debuggin CUDA programs, basic image processing in CUDA ([solutions](Lab02/solutions/))
 
-[Lab03](Lab03/README.md): Constant and shared memory ([solutions](Lab03/solutions/))
+[Lab03](Lab03/README.md): Constant and shared memory ([solutions](/README.md))
 
-[Lab04](Lab04/README.md): TODO
+[Lab04](Lab04/README.md): TODO ([solutions](/README.md))
 
-[Lab05](Lab05/README.md): TODO
+[Lab05](Lab05/README.md): TODO ([solutions](/README.md))
 
-[Lab06](Lab06/README.md): TODO
+[Lab06](Lab06/README.md): TODO ([solutions](/README.md))
 
-[Lab07](Lab07/README.md): TODO
+[Lab07](Lab07/README.md): TODO ([solutions](/README.md))
 
 **NOTE: The lab solutions are not available yet** 
