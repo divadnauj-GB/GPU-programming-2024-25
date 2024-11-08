@@ -32,7 +32,7 @@ The input is an RGB triple of unsigned char values; your task will be to write a
 - $Gray[i][j]=0.3 \times R[i][j]+0.6\times G[i][j]+0.11\times B[i][j]$
 - $Gray[i][j]=0.21\times R[i][j]+0.71\times G[i][j]+0.07\times B[i][j]$
 
-**Support Functions** The file “imglib_v01.zip” contains a set of helper functions that allows you to handle images without using the OpenCV library. img.h and img.cpp include useful functions for reading and writing PBM and PPM. You can extend them to support more formats in different depths or implement your own better version. 
+**Support Functions** The file `imglib_v01.zip` contains a set of helper functions that allows you to handle images without using the OpenCV library. img.h and img.cpp include useful functions for reading and writing PBM and PPM. You can extend them to support more formats in different depths or implement your own better version.
 
 **Image Format** For people who are developing their own system, the input image is stored in PPM P6 format, while the output grayscale image is stored in PPM P5 format. Students can create their own input images by exporting their images into PPM images. The easiest way to create an image is via external tools. On Unix, `bmptoppm`
 converts BMP images to PPM images. (more info <https://en.wikipedia.org/wiki/Netpbm/>)
