@@ -38,13 +38,13 @@ int main(void) {
     C_cpu=new float[DSIZE*DSIZE];
 
     for(int i=0;i<DSIZE*DSIZE;i++){
-        A[i]=1;//static_cast <float> (rand()) / static_cast <float> (RAND_MAX);        
+        A[i]=static_cast <float> (rand()) / static_cast <float> (RAND_MAX);        
         C_cpu[i]=0;
         C[i]=0;
     }
 
     for(int i=0;i<(2*RADIUS+1)*(2*RADIUS+1);i++){
-        Kernel[i]=0.5;//static_cast <float> (rand()) / static_cast <float> (RAND_MAX);          
+        Kernel[i]=static_cast <float> (rand()) / static_cast <float> (RAND_MAX);          
     }
 
     cpu_2dconv_vect(A,Kernel,C_cpu,DSIZE);
