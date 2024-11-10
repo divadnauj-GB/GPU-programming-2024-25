@@ -14,8 +14,8 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab04](Lab04/README.md): Events and Streams in CUDA <!---([solutions](Lab04/solutions/))-->
 
-[Lab05](Lab05/README.md): Profiling GPU workloads <!---([solutions](Lab05/solutions))-->
+[Lab05](Lab05/README.md): Profiling GPU workloads <!---(No solutions for this lab)-->
 
-[Lab06](Lab06/README.md): TODO <!---([solutions](/README.md))-->
+[Lab06](Lab06/README.md): Threading and sorting algorithms (Median filter) <!---([solutions](/README.md))-->
 
-[Lab07](Lab07/README.md): TODO <!---([solutions](/README.md))-->
+[Lab07](Lab07/README.md): Image processing on GPUs (spatial filtering) <!---([solutions](/README.md))-->
