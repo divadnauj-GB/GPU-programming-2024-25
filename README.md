@@ -4,20 +4,18 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 ## Laboratory exercises
 
-[Lab00](Lab00/README.md): Introduction to parallel programming 
+[Lab00](Lab00/README.md): Introduction to parallel programming
 
 [Lab01](Lab01/README.md): First CUDA programm ([solutions](Lab01/solutions/))
 
 [Lab02](Lab02/README.md): Debuggin CUDA programs, basic image processing in CUDA ([solutions](Lab02/solutions/))
 
-[Lab03](Lab03/README.md): Constant and shared memory ([solutions](Lab03/solutions/))
+[Lab03](Lab03/README.md): Constant and shared memory<!---([solutions](Lab03/solutions/))-->  
 
-[Lab04](Lab04/README.md): Events and Streams in CUDA ([solutions](Lab04/solutions/))
+[Lab04](Lab04/README.md): Events and Streams in CUDA <!---([solutions](Lab04/solutions/))-->
 
-[Lab05](Lab05/README.md): Profiling GPU workloads ([solutions](Lab05/solutions))
+[Lab05](Lab05/README.md): Profiling GPU workloads <!---([solutions](Lab05/solutions))-->
 
-[Lab06](Lab06/README.md): TODO ([solutions](/README.md))
+[Lab06](Lab06/README.md): TODO <!---([solutions](/README.md))-->
 
-[Lab07](Lab07/README.md): TODO ([solutions](/README.md))
-
-**NOTE: The lab solutions are not available yet** 
+[Lab07](Lab07/README.md): TODO <!---([solutions](/README.md))-->
