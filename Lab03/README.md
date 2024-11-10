@@ -2,6 +2,8 @@
 
 Using the shared and constant memory of the GPU
 
+**Note:** Exercises 1 and 2 were taken from <https://github.com/olcf/cuda-training-series/tree/master/exercises/hw2\>.
+
 ## Exercise 1: 1-D Stencil
 
 Consider applying a 1D stencil to a 1D array of elements. Each output element is the sum of input elements within a radius. So, if the radius is 3, then each output element is the sum of 7 input elements:

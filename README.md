@@ -12,9 +12,9 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab03](Lab03/README.md): Constant and shared memory ([solutions](Lab03/solutions/))
 
-[Lab04](Lab04/README.md): TODO ([solutions](/README.md))
+[Lab04](Lab04/README.md): Events and Streams in CUDA ([solutions](Lab04/solutions/))
 
-[Lab05](Lab05/README.md): TODO ([solutions](/README.md))
+[Lab05](Lab05/README.md): Profiling GPU workloads ([solutions](Lab05/solutions))
 
 [Lab06](Lab06/README.md): TODO ([solutions](/README.md))
 
