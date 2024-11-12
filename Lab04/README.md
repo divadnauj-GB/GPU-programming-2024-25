@@ -2,6 +2,26 @@
 
 Events and Streams in CUDA
 
+## Introduction
+
+The Kernel Execution (**KE**) in a GPU has two additional steps. These two steps are memory copy from Host to Device (**H2D**) and from Device to Host (**D2H**). Intuitively, we would copy the input memory from the host to the device first, then execute the kernel to compute the output, and finally copy the output memory from the device back to the host. However, this serial approach might not be optimal because we may further improve the performance by doing memory copy from host to device, kernel executions, and memory copy from device to host concurrently. To do this, there is an interesting concept named “streams”. This particular execution model comprises the following facts or assumptions:
+
+- The memory copy (**H2D**, **D2H**) time is linearly dependent on the size of the memory for copy.
+- The GPU would never be fully utilized.
+- The kernel execution **KE** could be divided into $N$ smaller kernel executions, and each smaller kernel execution would only take $1/N$ of the time the original kernel execution takes.
+- The memory copy time from host to device, kernel execution, and memory copy time from device to host are the same.
+- Each CUDA engine executes commands or kernels in order.
+
+Consequently, we could come up with two models to implement the program: *i)* the serial model and *ii)* the concurrent model.
+
+||
+|-|
+|<img src="docs/image.png" alt="picture" width="700" style="background-color:white;"/>|
+|**CUDA Stream:** Serial Model vs Concurrent Model|
+
+
+
+
 ## Exercise 1: CUDA Streams
 
 For your first task, you are given a code that performs a silly computation element-wise on a vector `overlap.cu`. You can initially compile, run and profile the code if you wish.
