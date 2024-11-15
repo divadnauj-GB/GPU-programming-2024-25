@@ -19,9 +19,6 @@ Consequently, we could come up with two models to implement the program: *i)* th
 |<img src="docs/image.png" alt="picture" width="700" style="background-color:white;"/>|
 |**CUDA Stream:** Serial Model vs Concurrent Model|
 
-
-
-
 ## Exercise 1: CUDA Streams
 
 For your first task, you are given a code that performs a silly computation element-wise on a vector `overlap.cu`. You can initially compile, run and profile the code if you wish.
@@ -59,7 +56,7 @@ if you run the code, there will be a verification check performed, to make sure 
 
 2. Write a program to call the kernel on vectors of different length. Modify the kernel if needed.
 
-3. Familiarize yourself with CUDA documentation to understand the following code snippets, which use events to calculate elapsed time: <<https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html>
+3. Familiarize yourself with CUDA documentation to understand the following code snippets, which use events to calculate elapsed time: <https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html>
 
     ```cpp
     // Initialize Events 
@@ -75,7 +72,8 @@ if you run the code, there will be a verification check performed, to make sure 
     // Memory Transfer
 
     // Record stop event 
-    cudaEventRecord(stop, 0); cudaEventSynchronize(stop);
+    cudaEventRecord(stop, 0);
+    cudaEventSynchronize(stop);
 
     // Calculate elapsed time 
     float elapsedTime;
