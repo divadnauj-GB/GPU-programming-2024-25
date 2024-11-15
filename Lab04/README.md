@@ -29,7 +29,7 @@ For your first task, you are given a code that performs a silly computation elem
 compile it using the following:
 
 ```bash
-    nvcc -arch=sm_{xx} -o overlap overlap.cu -lcudart # xx corresponds to your GOU compute capability 
+    nvcc -arch=sm_{xx} -o overlap overlap.cu -lcudart # xx corresponds to your GPU compute capability 
 ```
 
 Your objective is to create a fully overlapped version of the code. Use your knowledge of streams to create a version of the code that will issue the work in chunks, and for each chunk perform the copy to device, kernel launch, and copy to host in a single stream, then modifying the stream for the next chunk. The work has been started for you in the section of code after the #ifdef statement. Look for the ``FIXME`` tokens there, and replace each ``FIXME`` with appropriate code to complete this task.
@@ -37,7 +37,7 @@ Your objective is to create a fully overlapped version of the code. Use your kno
 When you have something ready to test, compile with this additional switch:
 
 ```bash
-nvcc -arch=sm_{xx} -o overlap overlap.cu -DUSE_STREAMS -lcudart # xx corresponds to your GOU compute capability 
+nvcc -arch=sm_{xx} -o overlap overlap.cu -DUSE_STREAMS -lcudart # xx corresponds to your GPU compute capability 
 ```
 
 if you run the code, there will be a verification check performed, to make sure you have processed the entire vector correctly, in chunks. If you pass the verification test, the program will display the elapsed time of the streamed version. You should be able to get to at least 2X faster (i.e. half the duration) of the non-streamed version.
