@@ -163,7 +163,7 @@ The median is calculated in two steps: **1)** first, the element values are sort
     - Include one or more conditional statements to handle the median in the corner cases.
 
 3. (optional) Adapt the kernel description to process the pixels of one layer from an input image.
-    **Hint:** use the OpenCV library to load images from files and split the layers. Altenatively you can use the helper libraries provided to you in [Lab02](Lab02).
+    **Hint:** use the OpenCV library to load images from files and split the layers. Altenatively you can use the helper libraries provided to you in [Lab02](../Lab02/).
 
 The following is an example of median filter applied an RGB color image that contained Salt & Pepper noise corruption:
 
