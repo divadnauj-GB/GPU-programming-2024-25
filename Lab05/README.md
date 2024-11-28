@@ -10,7 +10,7 @@
 
 The threading in GPUs is based on the organization and handling of threads (and warps) to execute a given operation. In the most ideal of the cases, the implementation or description of a parallel algorithm targets the highest performance by using as many parallel threads as possible, so achieving a high percentage of embarrassingly parallel operation in the complete program.
 
-Unfortunately, the complexity in most algorithms demands clever thread management involving the addition of conditional statements (e.g., if and switch case) and iterative operators (e.g., for and while) in some regions of the program. The conditional statements are used to select operative conditions based on local threads parameters (e.g., ThreadId.x), shared resources (i.e., a shared variable among threads) or general conditions of the program. It is worth noting that conditional statements may cause intra-warp divergence (when threads in a warp execute different instructions and operations according to a selected path). Moreover, the iterative statements are used in combination with local variables in a thread to perform extended operations per thread (e.g. multidimensional accumulations).
+Unfortunately, the complexity in most algorithms demands clever thread management involving the addition of conditional statements (e.g., `if` and switch `case`) and iterative operators (e.g., `for` and `while`) in some regions of the program. The conditional statements are used to select operative conditions based on local threads parameters (e.g., `ThreadId.x`), shared resources (i.e., a shared variable among threads) or general conditions of the program. It is worth noting that conditional statements may cause intra-warp divergence (when threads in a warp execute different instructions and operations according to a selected path). Moreover, the iterative statements are used in combination with local variables in a thread to perform extended operations per thread (e.g. multidimensional accumulations).
 
 ## Exercise 1
 
@@ -62,9 +62,9 @@ __global__ void Vector_add(int* a, int* b, int* c)
 
     $C=\alpha A+B$
 
-    where, $\alpha$  is a scala value, and A, B and C are one-dimension arrays.
+    where, $\alpha$  is a scalar value, and A, B and C are one-dimension arrays.
 
-    **Hint:** use the conditional statements (if and switch case) to describe the selection of the operation to be executed inside the kernel.
+    **Hint:** use the conditional statements (`if` and `switch case`) to describe the selection of the operation to be executed inside the kernel.
 
     Are the conditional statements causing intra-warp divergence? why?
 
@@ -105,11 +105,11 @@ __global__ void naive_matrix(int* input_a, int* input_b, int* output_c, int limi
 }
 ```
 
-From the kernel, please, observe that thread parameters in two dimensions (threadId.x and threadId.y) are used to the take advantage of the spatial parallelism. Thus, both thread parameters are organized to address the rows and columns of the input matrices (input_a, and input_b). In detail, the values in the matrices are address using a local variable (i), which serves as memory-offset to address each element from both matrices. The iterative loop is employed to determine the accumulative operation as described by the equation.
+From the kernel, please, observe that thread parameters in two dimensions (`threadId.x` and `threadId.y`) are used to the take advantage of the spatial parallelism. Thus, both thread parameters are organized to address the rows and columns of the input matrices (input_a, and input_b). In detail, the values in the matrices are address using a local variable (i), which serves as memory-offset to address each element from both matrices. The iterative loop is employed to determine the accumulative operation as described by the equation.
 
 It is worth noting that elements from both matrices, A and B, are organized in row-major order inside the device memory. The argument “limit” indicates the width of both matrices. Finally, the conditional statement determines the number of active threads according to the sizes of the input matrices.
 
-1. Is it possible to eliminate the conditional statement (line 6 in listing 2)?, does the removal affect the results?, which are the implications?
+1. Is it possible to eliminate the `if` conditional statement (line 6 in listing 2)?, does the removal affect the results?, which are the implications?
 
 2. Modify the description of the kernel to operate the matrix multiplication of input matrices A and B with different sizes, as depicted in Figure 1.
 
@@ -124,7 +124,7 @@ It is worth noting that elements from both matrices, A and B, are organized in r
     $a_{(j,i)}^T=a_{(j,i)}+1,25$, when the value a   is lower or equal than -10,5
 
 
-    **Hint:** use the conditional statements (if and switch case) to describe the selection of the operation to be executed inside the kernel.
+    **Hint:** use the conditional statements (`if` and `switch case`) to describe the selection of the operation to be executed inside the kernel.
 
     Is it possible to generate intra-warp divergence when implementing the kernel?, why?
 
@@ -149,8 +149,8 @@ The median is calculated in two steps: **1)** first, the element values are sort
 
     **Hints:**
     - Use as many threads as possible to describe the algorithm;
-    - Consider that each thread must process the median operation using the values from the input  matrix and the neighbors of each element;
-    - Employ a mechanism to sort the values per thread (e.g., one or more if statements);
+    - Consider that each thread must process the median operation using the values from the input matrix and the neighbors of each element;
+    - Employ a mechanism to sort the values per thread (e.g., one or more`if`statements);
     - Employ a mechanism to determine the median value.
     - Implement the median filter algorithm using tiling and shared memory
         - register the differences in term of execution time
@@ -159,7 +159,7 @@ The median is calculated in two steps: **1)** first, the element values are sort
 2. Extend the description of the median filter to input matrices of 1024x1024 (n=1024) or any other high dimentional size such as HD, 4K, etc. Calculate the median also in the corner cases (limits 0, and 1023) of the output matrix.
 
     **Hint:**
-    - Consider using the shared memory capabilities to divide the median operation in blocks and process the complete input matrix.
+    - Consider using the shared memory capabilities to divide the median operation in blocks and process the complete input matrix in parallel.
     - Include one or more conditional statements to handle the median in the corner cases.
 
 3. (optional) Adapt the kernel description to process the pixels of one layer from an input image.

@@ -12,7 +12,7 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab03](Lab03/README.md): Constant and shared memory ([solutions](Lab03/solutions/))
 
-[Lab04](Lab04/README.md): Events and Streams in CUDA <!---([solutions](Lab04/solutions/))-->
+[Lab04](Lab04/README.md): Events and Streams in CUDA ([solutions](Lab04/solutions/))
 
 [Lab05](Lab05/README.md): Threading and sorting algorithms (Median filter) <!---([solutions](Lab05/solutions))-->
 
