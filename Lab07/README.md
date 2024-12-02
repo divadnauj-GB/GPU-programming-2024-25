@@ -16,13 +16,13 @@ This exercise follows the similar implementation as the Exercise 4 introduced in
 |||
 |-|-|
 |Mean filter| $`\frac{1}{9} \cdot \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix}`$|
-|Sobel filter $G_x$| $$ \begin{pmatrix} +1 & 0 & -1 \\ +2 & 0 & -2 \\ +1 & 0 & -1 \end{pmatrix} $$|
-|Sobel filter $G_y$| $$ \begin{pmatrix} +1 & +2 & +1 \\ 0 & 0 & 0 \\ -1 & -2 & -1 \end{pmatrix} $$|
-|Prewitt filter $G_x$| $$ \begin{pmatrix} +1 & +1 & +1 \\ 0 & 0 & 0 \\ -1 & -1 & -1 \end{pmatrix} $$|
-|Prewitt filter $G_y$| $$ \begin{pmatrix} +1 & 0 & -1 \\ +1 & 0 & -1 \\ +1 & 0 & -1 \end{pmatrix} $$|
-|Gaussian filter $\sigma=1$| $$ \frac{1}{273} \cdot \begin{pmatrix} 1 & 4 & 7 & 4 & 1 \\ 4 & 16 & 26 & 16 & 4 \\ 7 & 26 & 41 & 26 & 7 \\ 4 & 16 & 26 & 16 & 4 \\ 1 & 4 & 7 & 4 & 1 \end{pmatrix} $$|
-|Laplacian filter|$$ \begin{pmatrix} 0  & 0  & -1 & 0  & 0  \\ 0  & -1 & -2 & -1 & 0  \\ -1 & -2 & 17 & -2 & -1 \\ 0  & -1 & -2 & -1 & 0  \\ 0  & 0 & -1 & 0  & 0  \end{pmatrix} $$|
-|Sharpen filter| $$ \begin{pmatrix} 0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0 \end{pmatrix} $$|
+|Sobel filter $G_x$| $` \begin{pmatrix} +1 & 0 & -1 \\ +2 & 0 & -2 \\ +1 & 0 & -1 \end{pmatrix} `$|
+|Sobel filter $G_y$| $` \begin{pmatrix} +1 & +2 & +1 \\ 0 & 0 & 0 \\ -1 & -2 & -1 \end{pmatrix} `$|
+|Prewitt filter $G_x$| $` \begin{pmatrix} +1 & +1 & +1 \\ 0 & 0 & 0 \\ -1 & -1 & -1 \end{pmatrix} `$|
+|Prewitt filter $G_y$| $` \begin{pmatrix} +1 & 0 & -1 \\ +1 & 0 & -1 \\ +1 & 0 & -1 \end{pmatrix} `$|
+|Gaussian filter $\sigma=1$| $` \frac{1}{273} \cdot \begin{pmatrix} 1 & 4 & 7 & 4 & 1 \\ 4 & 16 & 26 & 16 & 4 \\ 7 & 26 & 41 & 26 & 7 \\ 4 & 16 & 26 & 16 & 4 \\ 1 & 4 & 7 & 4 & 1 \end{pmatrix} `$|
+|Laplacian filter|$` \begin{pmatrix} 0  & 0  & -1 & 0  & 0  \\ 0  & -1 & -2 & -1 & 0  \\ -1 & -2 & 17 & -2 & -1 \\ 0  & -1 & -2 & -1 & 0  \\ 0  & 0 & -1 & 0  & 0  \end{pmatrix} `$|
+|Sharpen filter| $` \begin{pmatrix} 0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0 \end{pmatrix} `$|
 
 Write the code to perform the following:
 
