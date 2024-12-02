@@ -15,7 +15,7 @@ This exercise follows the similar implementation as the Exercise 4 introduced in
 
 |||
 |-|-|
-|Mean filter| ```math \frac{1}{9} \cdot \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix}```|
+|Mean filter| $\frac{1}{9} \cdot \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix}$|
 |Sobel filter $G_x$| $$ \begin{pmatrix} +1 & 0 & -1 \\ +2 & 0 & -2 \\ +1 & 0 & -1 \end{pmatrix} $$|
 |Sobel filter $G_y$| $$ \begin{pmatrix} +1 & +2 & +1 \\ 0 & 0 & 0 \\ -1 & -2 & -1 \end{pmatrix} $$|
 |Prewitt filter $G_x$| $$ \begin{pmatrix} +1 & +1 & +1 \\ 0 & 0 & 0 \\ -1 & -1 & -1 \end{pmatrix} $$|
