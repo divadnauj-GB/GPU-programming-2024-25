@@ -20,4 +20,4 @@ This repository corresponds to the laboratory exercises of the GPU programming c
 
 [Lab07](Lab07/README.md): Image processing on GPUs (spatial filtering) <!---([solutions](Lab07/solutions))-->
 
-[Lab08](Lab08/README.md): Libraries: cuBlas and Cuda Graphs  <!---([solutions](Lab08/solutions))-->
+<!--- [Lab08](Lab08/README.md): Libraries: cuBlas and Cuda Graphs  ([solutions](Lab08/solutions))-->
