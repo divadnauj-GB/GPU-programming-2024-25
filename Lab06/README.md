@@ -106,7 +106,7 @@ nv-nsight-cu-cli --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum,l1tex_
 
 One goal could be to measure the global memory load efficiency of our kernels. In this case we asked for two metrics: "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum" (the number of global memory load requests) and "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum" (the number of sectors requested for global loads). This first metric above represents the denominator (requests) of the desired measurement (transactions per request) and the second metric represents the numerator (transactions). Dividing these numbers will give us the number of transactions per request.
 
-What similarities or differences do you notice between the row_sum and column_sum kernels? Do the kernels (row_sum, column_sum) have the same or different efficiencies? Why? How does this correspond to the observed kernel execution times for the first profiling run?
+<!---What similarities or differences do you notice between the row_sum and column_sum kernels? Do the kernels (row_sum, column_sum) have the same or different efficiencies? Why? How does this correspond to the observed kernel execution times for the first profiling run?-->
 
 Here is a useful blog to help you get familiar with Nsight Compute: <https://devblogs.nvidia.com/using-nsight-compute-to-inspect-your-kernels/>
 
